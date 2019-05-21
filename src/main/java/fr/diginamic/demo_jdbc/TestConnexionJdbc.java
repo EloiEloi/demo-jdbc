@@ -165,6 +165,12 @@ public class TestConnexionJdbc {
 				if (monStatement != null) {
 					monStatement.close();
 				}
+
+			} catch (SQLException e) {
+				throw new TechnicalException("Impossible de fermer le statement à la BDD", e);
+			}
+			try {
+
 				if (maConnexion != null) {
 					maConnexion.close();
 				}
