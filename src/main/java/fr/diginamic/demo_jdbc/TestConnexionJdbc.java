@@ -62,9 +62,6 @@ public class TestConnexionJdbc {
 
 		try {
 
-			maConnexion.setAutoCommit(false);
-			maConnexion.commit();
-
 			nb = monStatement
 					.executeUpdate("INSERT INTO ARTICLE (DESIGNATION, FOURNISSEUR, PRIX) VALUES ('lampe', 'ikea', 10)");
 			nb = monStatement.executeUpdate(
